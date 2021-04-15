@@ -16,12 +16,13 @@ var locationDisplay = document.querySelector("#current-loc")
 function success(pos){
     var crd = pos.coords;
     var lat = crd.latitude;
-    var lon=crd.longitude;
+    var lon= crd.longitude;
+    var accuracy= crd.accuracy;
     console.log("this is the coordinates", crd);
     console.log("this is the latitude:", lat);
     console.log("this is the longitude:", lon);
 
-    locationDisplay.textContent = lat + ", " + lon;
+    locationDisplay.textContent = lat + ", " + lon + " and the accuracy is " + accuracy;
 }
 
 const options = {
