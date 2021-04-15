@@ -21,7 +21,7 @@ function success(pos){
     console.log("this is the latitude:", lat);
     console.log("this is the longitude:", lon);
 
-    locationDisplay.textContent = crd;
+    locationDisplay.textContent = lat + ", " + lon;
 }
 
 const options = {
