@@ -10,6 +10,8 @@ function getLocation() {
     // console.log("this is the position", position)
 }
 
+var locationDisplay = document.querySelector("#current-loc")
+
 //get the user's current location
 function success(pos){
     var crd = pos.coords;
@@ -18,6 +20,8 @@ function success(pos){
     console.log("this is the coordinates", crd);
     console.log("this is the latitude:", lat);
     console.log("this is the longitude:", lon);
+
+    locationDisplay.textContent = crd;
 }
 
 const options = {
